@@ -1,0 +1,199 @@
+.item{
+    min-width: 70px;
+}
+.icon{
+    margin-right:50px;
+    position:relative;
+}
+body{
+    padding:0;
+    margin:0;
+}
+.img{
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    border:1px solid black;
+}
+
+.img1{
+    width:100px;
+    height:35px;
+}
+.img2{
+    margin-top:15px;
+    width:35px;
+    height:35px;
+}
+.img3{
+    margin-left:10px;
+    width:25px;
+    height:25px;
+    margin-top:15px;
+}
+.img4{
+    margin-left:15px;
+    width:25px;
+    height:25px;
+    margin-top:15px;
+}
+.img5{
+    margin-left:20px;
+    width:25px;
+    height:25px;
+    margin-top:25px;
+}
+
+.person{
+    height:50px;
+    /* border-top:1px solid black; */
+    margin-top:20px;
+}
+.peoplep{
+    margin-top:25px;
+    margin-left:10px;
+}
+a{
+    color:black;
+}
+
+.intro{
+    position:relative;
+    color:white;
+    margin-top:170px;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.h2{
+    position:relative;
+    margin-top:10pxs;
+    color:#fff;
+}
+h5{
+    padding:5px;
+}
+p{
+    color:black;
+}
+.ptag{
+
+    color:black;
+    margin-left:-5px;
+}
+.time{
+    margin-top:15px;
+    margin-left:5px;
+}
+.black{
+    color:black;
+    margin-top:-20px;
+    margin-left:20px;
+}
+.box{
+    width:100%;
+    position:relative;
+    height:50px;
+    margin-left:-20px;
+}
+/* //border here */
+/* .col{
+    border:1px solid black;
+} */
+.cards{
+    height:100px;
+}
+h3{
+    position:relative;
+    margin-left:5px;
+}
+.col1{
+    margin-left:15px;
+}
+.color{
+    height:180px;
+    background-image:url('images/react.webp');
+    background-size:cover;
+    background-position:center;
+    border-radius:15px;
+    padding:0px;
+
+}
+.color1{
+    height:180px;
+    background-image:url('images/graphqi.png.webp');
+    background-size:cover;
+    background-position:center;
+    border-radius:15px;
+    padding:0px;
+
+}
+.color2{
+    height:180px;
+    background-image:url('images/angular.webp');
+    background-size:cover;
+    background-position:center;
+    border-radius:15px;
+    padding:0px;
+
+}
+.home{
+    margin-top:200px;
+}
+.color3{
+    height:180px;
+    background-image:url('images/python.jpg');
+    background-size:cover;
+    background-position:center;
+    border-radius:15px;
+    padding:0px;
+
+}
+/* @media(max-width:1000px){
+
+    .home{
+        margin-top:600px;
+    }
+}
+@media(min-width:767px){
+
+
+}
+@media(min-width:1100px){
+
+} */
+
+/* Popup Container (initially hidden) */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }

@@ -1,0 +1,81 @@
+{% extends 'details/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'details/style.css' %}">
+{% endblock %}
+{% block content %}
+{% for style in eduStyles %}
+<div class="container-1">
+  <div class="content-card shadow"
+    style="color:black;background-image: url('{{style.image.url}}');background-size:cover;">
+    {% endfor %}
+    {% include 'nav.html' %}
+    <div class="container-fluid text-center">
+
+      {% for odd, even in pairs %}
+      <div id="popup" class="popup rounded-4"">
+    <div class=" popup-content" style="border:2px solid #fff;">
+        <span class="close-button"></span>
+        <img src="{{ odd.certificate.url }}" class="popup-image"
+          style="width:100%; height:150px;">
+      </div>
+    </div>
+    <div id="popup" class="popup rounded-4"">
+      <div class=" popup-content" style="border:2px solid #fff;">
+          <span class="close-button"></span>
+          <img src="{{ even.certificate.url }}" class="popup-image"
+            style="width:100%; height:150px;">
+        </div>
+      </div>
+
+
+    <div class="row rounded cards2" id="cards" style="text-align: center; margin:auto; justify-content:center; ">
+      <div class="col-1 col-md-1 col-lg-1 rounded-4 p-0 mx-3 shadow popupTrigger clickable-image3"
+        style="border:1px solid #fff; background:rgba(0,0,0,0.8);height:170px ;">
+        <div id="list-example" class="d-flex flex-column gap-2 simple-list-group-scrollspytext-center"
+          style="padding-top:30px; color:#fff">
+          <a class=" rounded my-4"  href="#simple-list-item-1" style="color:#fff">{{odd.organisation}}</a>
+        </div>
+      </div>
+
+      <div class="col-7 col-sm-7 col-md-8 col-lg-9 rounded-4 shadow "
+        style="border:1px solid #fff; height:170px; overflow:auto; color:#fff; background:rgba(0,0,0,0.8)">
+        <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
+          class="scrollspy-example" tabindex="0">
+          <h4 id="simple-list-item-1" style="color:#fff">{{ odd.organisation}}</h4>
+          <p class="my-3"> {{ odd.description}} </p>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="row rounded cards2 my-4 pt-4" id="cards" style="text-align: center; margin:auto; justify-content:center">
+      <div class="col-7 col-sm-7 col-md-8 col-lg-9 rounded-4 mx-3 shadow "
+      style="border:1px solid #fff; height:170px; overflow:auto; color:#fff; background:rgba(0,0,0,0.8)">
+      <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
+        class="scrollspy-example" tabindex="0">
+        <h4 id="simple-list-item-1" style="color:#fff">{{ even.organisation}}</h4>
+        <p class="my-3"> {{ even.description}} </p>
+      </div>
+    </div>
+    <div class="col-1 col-md-1 col-lg-1 rounded-4 p-0 shadow popupTrigger clickable-image3"
+    style="border:1px solid #fff; background:rgba(0,0,0,0.8);height:170px ;">
+    <div id="list-example" class="d-flex flex-column gap-2 simple-list-group-scrollspy text-center"
+      style="padding-top:30px; color:#fff">
+      <a class=" rounded my-4" href="#simple-list-item-1" style="color:#fff">{{even.organisation}}</a>
+    </div>
+  </div>
+    </div>
+    </div>
+
+    <br>
+    {% endfor %}
+
+
+    {% include 'details/footer.html'%}
+  </div>
+</div>
+</div>
+{% block extra_content %}
+{% endblock %}
+{% endblock %}

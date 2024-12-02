@@ -1,0 +1,69 @@
+{% extends 'details/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-1">
+<div class="content-card shadow">
+{% for style in styles %}
+<div class="container-fluid text-center ps-0 pe-0 d-wrap shadow-lg image-container" style="background-image: 
+     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+      url('{{style.image.url}}');">
+{% include 'nav.html' %}
+    <div class=" row pl-0" style="height: 450px; width:100%">
+        <div class="col-4 content1">
+            <h2 class="intro">{{ style.description}}</h2>
+        </div>
+        <div class="col d-md-block ">
+            <div class="content">
+            </div>
+        </div>
+        <div class="col-6 col-md-5 col-lg-5 col-xl-4 ">
+        <a href="{% url 'details:about' %}"><div class="content clickable-image2" 
+        style="background-image:
+        url('{{style.profile_image.url}}');"> 
+        </div></a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<div class="d-flex flex-row justify-content-around">
+    <div class="p-2" style="border-bottom:3px solid black">
+        <h3>Skills I am proficient in</h3>
+    </div>
+</div>
+
+<div class="row flex-wrap text-center m-0">
+    {% for skill in skills %}
+    <div id="popup" class="popup rounded-4">
+        <div class="popup-content">
+            <span class="close-button"></span>
+            <h2>{{skill.title }}</h2>
+            <hr>
+            <p>{{ skill.text_field}}</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-6 col-lg-3 d-flex card-popup">
+        <div class="col rounded-4 p-0  shadow-lg my-2   "" style=" height:400px; width:100%;">
+            <div class="color popupTrigger clickable-image" style="background-image: url('{{ skill.image.url }}');">
+            </div>
+            <div class="write">
+                <h5>{{skill.title}}</h5>
+                <div class="writeNest d-flex">
+                </div>
+                <div class="person d-flex border-top border-2  rounded-2">
+                    <p class="peoplep">{{ skill.description}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% block extra_content %}
+    {% endblock %}
+</div>
+
+
+{% include 'footer.html' %}
+</div>
+</div>
+{% endblock %}
